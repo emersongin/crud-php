@@ -45,7 +45,7 @@
 
             <div class="form-group">
               <label for="cnpj" >CNPJ: <sup class="text-danger">*</sup></label>
-              <input type="text" name="cnpj" id="email" value="<?= $dados['cnpj'] ?>" class="form-control <?php if(isset($dados['cnpj_erro'])){echo $dados['cnpj_erro'] ? 'is-invalid' : '';}; ?>" maxlength="14" >
+              <input type="text" name="cnpj" id="cnpj" value="<?= $dados['cnpj'] ?>" class="form-control <?php if(isset($dados['cnpj_erro'])){echo $dados['cnpj_erro'] ? 'is-invalid' : '';}; ?>" maxlength="18" onkeyup="mascara_cnpj()" >
               <div class="invalid-feedback">
                     <?=  $dados['cnpj_erro'] ?>
               </div>
@@ -63,7 +63,7 @@
 
             <div class="form-group">
               <label for="telefone" >Telefone: <sup class="text-danger">*</sup></label>
-              <input type="text" name="telefone" id="telefone" value="<?= $dados['telefone'] ?>" class="form-control <?php if(isset($dados['telefone_erro'])){echo $dados['telefone_erro'] ? 'is-invalid' : '';}; ?>" >
+              <input type="text" name="telefone" id="telefone" value="<?= $dados['telefone'] ?>" class="form-control <?php if(isset($dados['telefone_erro'])){echo $dados['telefone_erro'] ? 'is-invalid' : '';}; ?>" maxlength = "13" onkeyup="mascara_telefone()" >
               <div class="invalid-feedback">
                     <?=  $dados['telefone_erro'] ?>
               </div>
@@ -85,3 +85,4 @@
       
   </div>
 </div>
+

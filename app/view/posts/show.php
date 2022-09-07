@@ -22,8 +22,8 @@
       </li>
       <li class="list-group-item">
         <h5>Data de Fundação: </h5><?=
-                                    $data_normal = date("d/m/Y", strtotime($dados['posts']->data_fundacao));
-                                    ?>
+         $data_normal = date("d/m/Y", strtotime($dados['posts']->data_fundacao));
+          ?>
       </li>
     </ul>
     <div class="card-body d-flex ">
@@ -47,13 +47,13 @@
 
   </div>
 </div>
-<script>
-  function confirmDelete(event, form) {
-    event.preventDefault()
-    var decisao = confirm("Voce deseja deletar essa empresa?")
+  <script>
+    function confirmDelete(event, form) {
+        event.preventDefault()
+        var decisao = confirm("Voce deseja deletar essa empresa?")
 
-    if (decisao) {
-      form.submit();
+        if (decisao) {
+            form.submit();
+        }
     }
-  }
 </script>
