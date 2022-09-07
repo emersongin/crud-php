@@ -37,16 +37,16 @@
     public function update($dados){
 
       $this->db->query("UPDATE empresa SET name= :nome, cnpj = :cnpj, cep= :cep, data_fundacao = :data_fundacao, email = :email, telefone = :telefone, endereco = :endereco WHERE id = :id ");
-  
+
       $data_timestamp = strtotime($dados['data_fundacao']);
-      $data_normal = date("d/m/Y", $data_timestamp);
-  
+      $data_americana = date("Y/m/d", $data_timestamp);
+
       $this->db->bind("nome",$dados['nome']);
       $this->db->bind("id",$dados['id']);
       $this->db->bind("email",$dados['email']);
       $this->db->bind("cep",$dados['cep']);
       $this->db->bind("cnpj",$dados['cnpj']);
-      $this->db->bind("data_fundacao",$dados[date("d/m/Y", $data_timestamp)]);
+      $this->db->bind("data_fundacao",$dados['data_fundacao']);
       $this->db->bind("telefone",$dados['telefone']);
       $this->db->bind("endereco",$dados['endereco']);
   

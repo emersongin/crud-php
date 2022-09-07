@@ -95,17 +95,20 @@ class Posts extends Controller
   public function show($id)
   {
     $post = $this->postmodel->readId($id);
+
     $dados = [
-      'posts' => $post,
+      'posts' => $post
     ];
+
     $this->view('posts/show', $dados);
   }
 
   public function update($id)
   {
-    $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-    if (isset($formulario, $dados)) :
 
+    $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+    if (isset($formulario)) :
       $dados = [
         'id' => $id,
         'nome' => trim($formulario['nome']),
@@ -147,9 +150,12 @@ class Posts extends Controller
         else :
           die("Erro ao atualizar post no banco de dados.");
         endif;
+
+
       endif;
-      
+
     else :
+
       $post = $this->postmodel->readId($id);
 
       if ($post->users_id != $_SESSION['user_id']) :
