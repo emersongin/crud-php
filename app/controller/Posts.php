@@ -25,14 +25,14 @@ class Posts extends Controller
 
     if (isset($formulario)) :
       $dados = [
-        'nome' => trim($formulario['nome']),
-        'email' => trim($formulario['email']),
-        'cnpj' => trim($formulario['cnpj']),
-        'cep' => trim($formulario['cep']),
-        'telefone' => trim($formulario['telefone']),
-        'endereco' => trim($formulario['endereco']),
+        'nome'          => trim($formulario['nome']),
+        'email'         => trim($formulario['email']),
+        'cnpj'          => trim($formulario['cnpj']),
+        'cep'           => trim($formulario['cep']),
+        'telefone'      => trim($formulario['telefone']),
+        'endereco'      => trim($formulario['endereco']),
         'data_fundacao' => trim($formulario['data_fundacao']),
-        'users_id' => $_SESSION['user_id']
+        'users_id'      => $_SESSION['user_id'],
       ];
 
       if (in_array("", $formulario)) :

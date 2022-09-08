@@ -1,8 +1,10 @@
 <?php
-session_start();
 
-include '../app/configuracao.php';
-include '../app/autoload.php';
+    session_start();
+
+    include '../app/configuracao.php';
+    include '../app/autoload.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -21,17 +23,18 @@ include '../app/autoload.php';
 </head>
 
 <body>
-  <?php
-  require_once '../app/view/header.php';
-  $rotas = new Rota();
-  require_once '../app/view/footer.php';
-  ?>
+    <?php
+
+        require_once '../app/view/header.php';
+        $rotas = new Rota();
+        require_once '../app/view/footer.php';
+
+    ?>
 
 
-<!-- BOOTSTRAP JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/js/bootstrap.js" integrity="sha512-KCgUnRzizZDFYoNEYmnqlo0PRE6rQkek9dE/oyIiCExStQ72O7GwIFfmPdkzk4OvZ/sbHKSLVeR4Gl3s7s679g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="<?= URL ?>/public/js/main.js"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/js/bootstrap.js" integrity="sha512-KCgUnRzizZDFYoNEYmnqlo0PRE6rQkek9dE/oyIiCExStQ72O7GwIFfmPdkzk4OvZ/sbHKSLVeR4Gl3s7s679g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="<?= URL ?>/public/js/main.js"></script>
 </body>
-
 </html>
